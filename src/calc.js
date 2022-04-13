@@ -18,22 +18,37 @@ export default class Calculator{
         }
 
         this.result = val3 ? this.result + val3 : this.val1 + this.val2;
-        return this;
+        return this.result;
     }
 
-    minus(){
-        return this.val1 - this.val2;
+    minus(val3) {
+        if (this.mode === 'single') {
+            return this.val1 - this.val2;
+        }
+        this.result = val3 ? this.result - val3 : this.val1 - this.val2;
+        return this.result;
     }
 
-    multiply(){
-        return this.val1 * this.val2;
+    multiply(val3) {
+        if (this.mode === 'single') {
+            return this.val1 * this.val2;
+        }
+        this.result = val3 ? this.result * val3 : this.val1 * this.val2;
+        return this.result;
     }
     
-    del(){
+    del(val3){
         if (this.val2 === 0) {
             return 'Error';
         }
-        return this.val1 / this.val2;
+        if (this.mode === 'single') {
+            return this.val1 / this.val2;
+        }
+        if (val3 === 0) {
+            return 'Error';
+        }
+        this.result = val3 ? this.result / val3 : this.val1 / this.val2;
+        return this.result;
     }
 
     res() {
