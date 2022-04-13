@@ -79,7 +79,7 @@ describe('Tasks', function () {
         it('7 - 1 - 1 - 1 - 2', function () {
             let obj = (new calculator(7,1, 'multiple'));
             obj =  obj.minus().minus(1).minus(1).minus(2);
-            assert.equal(obj.res(),0)
+            assert.equal(obj.res(),2)
         }); 
     });
     

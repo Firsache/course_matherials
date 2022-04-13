@@ -18,7 +18,7 @@ export default class Calculator{
         }
 
         this.result = val3 ? this.result + val3 : this.val1 + this.val2;
-        return this.result;
+        return this;
     }
 
     minus(val3) {
@@ -26,7 +26,7 @@ export default class Calculator{
             return this.val1 - this.val2;
         }
         this.result = val3 ? this.result - val3 : this.val1 - this.val2;
-        return this.result;
+        return this;
     }
 
     multiply(val3) {
@@ -34,7 +34,7 @@ export default class Calculator{
             return this.val1 * this.val2;
         }
         this.result = val3 ? this.result * val3 : this.val1 * this.val2;
-        return this.result;
+        return this;
     }
     
     del(val3){
@@ -48,7 +48,7 @@ export default class Calculator{
             return 'Error';
         }
         this.result = val3 ? this.result / val3 : this.val1 / this.val2;
-        return this.result;
+        return this;
     }
 
     res() {
